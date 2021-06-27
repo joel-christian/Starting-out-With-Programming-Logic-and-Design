@@ -16,14 +16,14 @@ totalCalories = 0
 def main():
     #Get the number of fat grams
     inputFat = float(input("Enter the number of fat grams consumed: "))
-    #Calculates and displays the number of fat calories
-    setFat(inputFat)
-
+    
     #Get the number of carbohydrates grams
     inputCarb = float(input("enter the number of carbohydrates grams consumed: "))
+
+    #Calculates and displays the number of fat calories
+    setFat(inputFat)
     #Calculates and displays the number of carb calories
     setCarb(inputCarb)
-
     #Displays the total calories from both fat and carbs
     print("The total number of calories consumed is: ", totalCalories)
 
@@ -41,7 +41,7 @@ def setCarb(totalFat):
     carbCal = totalFat * CARBCAL_MULTIPLIER
     global totalCalories
     totalCalories = totalCalories + carbCal
-    print("The total number of Fat Calories is:", carbCal)
+    print("The total number of Carbohydrates Calories is:", carbCal)
 
 #Call the main function
 main()
