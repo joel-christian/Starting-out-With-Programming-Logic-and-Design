@@ -1,0 +1,48 @@
+//Joel Christian
+
+//This program accepts the number of fat and carbohydrates gram consumed,
+//calculates the total calories using fat grams,
+//calculates the total calories using carbohydrates gram,
+//then calculates the total calories from fat and carb calories
+//and displays the fat calories, carbohydrates calories and the total calories results.
+
+//Create global constants
+Constant Real FATCAL_MULTIPLIER = 9
+Constant Real CARBCAL_MULTIPLIER = 4
+
+//Create and initialize a global variable to store the total calories
+Declare Global Real totalCalories = 0
+
+Module main()
+    //Get the number of fat grams
+   Declare Real inputFat
+    //Get the number of carbohydrates grams
+   Declare Real inputCarb
+
+    //Calculates and displays the number of fat calories
+    Call setFat(inputFat)
+   //Calculates and displays the number of carb calories
+    Call setCarb(inputCarb)
+
+    //Displays the total calories from both fat and carbs
+    Display "The total number of calories consumed is: ", totalCalories
+End Module
+
+
+//The setFat module calculates and displayes the total number of fat calories
+//and adds it to the total calories
+Module setFat(Real totalFat):
+    Declare Real fatCal
+    Set fatCal = totalFat * FATCAL_MULTIPLIER
+    Set totalCalories = totalCalories + fatCal
+    Display "The total number of Fat Calories is:", fatCal
+End Module
+
+//The setCarb module calculates and displays the total number of carbohydrates calories
+//and adds it to the total calories
+Module setCarb(Real totalFat):
+    Declare Real carbCal
+    Set carbCal = totalFat * CARBCAL_MULTIPLIER
+    Set totalCalories = totalCalories + carbCal
+    Display "The total number of Fat Calories is:", carbCal
+End Module
