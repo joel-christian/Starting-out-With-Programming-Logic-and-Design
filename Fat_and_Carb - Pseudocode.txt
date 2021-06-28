@@ -16,8 +16,12 @@ Declare Global Real totalCalories = 0
 Module main()
     //Get the number of fat grams
    Declare Real inputFat
+   Display “Enter the number of Fat grams consumed:”
+   Input inputFat
     //Get the number of carbohydrates grams
    Declare Real inputCarb
+   Display “Enter the number of Carbohydrates grams consumed:”
+   Input inputCarb
 
     //Calculates and displays the number of fat calories
     Call setFat(inputFat)
@@ -27,7 +31,6 @@ Module main()
     //Displays the total calories from both fat and carbs
     Display "The total number of calories consumed is: ", totalCalories
 End Module
-
 
 //The setFat module calculates and displayes the total number of fat calories
 //and adds it to the total calories
@@ -44,5 +47,5 @@ Module setCarb(Real totalFat):
     Declare Real carbCal
     Set carbCal = totalFat * CARBCAL_MULTIPLIER
     Set totalCalories = totalCalories + carbCal
-    Display "The total number of Fat Calories is:", carbCal
+    Display "The total number of Carbohydrates Calories is:", carbCal
 End Module
