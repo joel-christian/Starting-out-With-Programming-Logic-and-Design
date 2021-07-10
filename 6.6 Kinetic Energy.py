@@ -39,15 +39,15 @@ def kineticEnergy():
     
     #Validate that input is greater than 0
     while m <= 0:
-        print("ERROR: m must be greater than 0")
-        m = float(input("\nEnterthe mass (kg) of the object: "))
+        print("ERROR: mass must be greater than 0")
+        m = float(input("\nEnter the mass (kg) of the object: "))
 
     #Prompt the user to input the velocity of the object
     v = float(input("\nEnter the velocity (m/s) of the object: "))
 
     #Validate that the input is greater than 0
     while v <= 0:
-        print("ERROR: v must be greater than 0")
+        print("ERROR: velocity must be greater than 0")
         v = float(input("\nEnter the velocity (m/s) of the object: "))
     
     #Calculate the kinetic energy
